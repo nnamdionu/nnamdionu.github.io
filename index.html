@@ -30,6 +30,12 @@
         .tag-sql { background: #cce5ff; color: #004085; }
         .tag-python { background: #d4edda; color: #155724; }
         
+        /* Stats summary grid for Power BI project */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 20px 0; }
+        .stat-box { background: #f1f3f5; padding: 12px; border-radius: 6px; text-align: center; border: 1px solid #e9ecef; }
+        .stat-box .number { font-size: 1.2rem; font-weight: 700; color: var(--primary); display: block; }
+        .stat-box .label { font-size: 0.78rem; color: #6c757d; text-transform: uppercase; font-weight: 600; }
+
         ul { padding-left: 20px; margin-bottom: 20px; }
         li { margin-bottom: 6px; }
         
@@ -39,8 +45,6 @@
         .btn-primary:hover { background-color: #0b5ed7; }
         .btn-dark { background-color: #24292f; color: white; }
         .btn-dark:hover { background-color: #000; }
-        .btn-outline { border: 1px solid #6c757d; color: #333; background: white; }
-        .btn-outline:hover { background: #f1f3f5; }
     </style>
 </head>
 <body>
@@ -61,62 +65,48 @@
     <main>
         <h2 class="section-title">Featured Projects</h2>
 
-        <!-- PROJECT 1: POWER BI / DATA MODELING -->
+        <!-- PROJECT 1: MAVEN MARKET POWER BI -->
         <div class="project-card">
             <h3 class="project-title">Maven Market — Global Enterprise BI & Executive Dashboard</h3>
             <div class="tag-container">
                 <span class="tag tag-pbi">Power BI</span>
                 <span class="tag">Power Query (ETL)</span>
-                <span class="tag">DAX Analytics</span>
-                <span class="tag">Star Schema</span>
+                <span class="tag">DAX Measures</span>
+                <span class="tag">Star Schema Modeling</span>
+                <span class="tag">Interactive UX</span>
             </div>
-            <p>End-to-end business intelligence solution monitoring multi-region sales health, profit margins, and store returns for a global grocery chain.</p>
+            
+            <p>An end-to-end business intelligence solution built for a global supermarket chain tracking multi-region sales operations, store profitability, product category demand, and return metrics.</p>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="number">$1.75M+</span>
+                    <span class="label">Total Revenue Analyzed</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">24+ Stores</span>
+                    <span class="label">Multi-Region Tracking</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">Star Schema</span>
+                    <span class="label">Optimized Model</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">Dynamic DAX</span>
+                    <span class="label">Time Intelligence</span>
+                </div>
+            </div>
+
             <ul>
-                <li>Engineered a fully normalized star schema with dynamic cross-filtering controls.</li>
-                <li>Developed complex DAX measures for YTD revenue, performance targets, and return rates.</li>
-                <li>Designed intuitive executive visual views using dynamic tooltips and navigation bookmarks.</li>
+                <li><strong>ETL & Data Transformation:</strong> Imported and cleaned multi-table transactional datasets using Power Query, replacing missing values, standardizing data types, and establishing custom conditional columns.</li>
+                <li><strong>Data Modeling:</strong> Built a fully normalized Star Schema with 1-to-many relationships connecting key fact tables (<code>Transactions_Data</code>, <code>Returns_Data</code>) to lookup dimension tables (<code>Customers</code>, <code>Products</code>, <code>Stores</code>, <code>Regions</code>, <code>Calendar</code>).</li>
+                <li><strong>DAX Analytics:</strong> Authored custom time-intelligence DAX measures including <code>Total Revenue</code>, <code>Total Profit</code>, <code>YTD Revenue</code>, <code>6-Month Rolling Profit</code>, and <code>Return Rate %</code>.</li>
+                <li><strong>User Experience Design:</strong> Designed interactive executive dashboard layouts featuring dynamic matrix drill-downs, dynamic tooltips, and custom navigation bookmarks for seamless user experience.</li>
             </ul>
+
             <div class="btn-group">
                 <a href="https://github.com/nnamdionu/maven-market-powerbi" target="_blank" class="btn btn-dark">📂 Source Code & Data Model</a>
-                <a href="https://mavenshowcase.com/project/57867" target="_blank" class="btn btn-primary">📊 Interactive Dashboard</a>
-            </div>
-        </div>
-
-        <!-- PROJECT 2: SQL / DATA WRANGLING PLACEHOLDER -->
-        <div class="project-card">
-            <h3 class="project-title">E-Commerce Transaction Analysis & Customer Segmentation</h3>
-            <div class="tag-container">
-                <span class="tag tag-sql">PostgreSQL</span>
-                <span class="tag">Data Analysis</span>
-                <span class="tag">RFM Modeling</span>
-                <span class="tag">Query Optimization</span>
-            </div>
-            <p>Advanced SQL analytics project evaluating transactional data to identify high-value customer cohorts and churn risks.</p>
-            <ul>
-                <li>Wrote complex CTEs, window functions, and multi-table JOINs to calculate customer lifetime value (CLV).</li>
-                <li>Built aggregate reporting tables to reduce query execution time across 500k+ transaction records.</li>
-            </ul>
-            <div class="btn-group">
-                <a href="https://github.com/nnamdionu" target="_blank" class="btn btn-dark">📂 View SQL Repository</a>
-            </div>
-        </div>
-
-        <!-- PROJECT 3: PYTHON / EXPLORATORY DATA ANALYSIS PLACEHOLDER -->
-        <div class="project-card">
-            <h3 class="project-title">Exploratory Data Analysis & Predictive Analytics</h3>
-            <div class="tag-container">
-                <span class="tag tag-python">Python</span>
-                <span class="tag">Pandas / NumPy</span>
-                <span class="tag">Seaborn / Matplotlib</span>
-                <span class="tag">Jupyter Notebook</span>
-            </div>
-            <p>Automated data cleaning and exploratory analysis pipeline uncovering key trends and statistical anomalies in business performance datasets.</p>
-            <ul>
-                <li>Cleaned and imputed missing data across multi-source datasets using Pandas.</li>
-                <li>Generated publication-ready statistical visualizations to validate business hypotheses.</li>
-            </ul>
-            <div class="btn-group">
-                <a href="https://github.com/nnamdionu" target="_blank" class="btn btn-dark">📂 View Jupyter Notebook</a>
+                <a href="https://mavenshowcase.com/project/57867" target="_blank" class="btn btn-primary">📊 Interactive Live Dashboard</a>
             </div>
         </div>
 
