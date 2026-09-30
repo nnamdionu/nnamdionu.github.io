@@ -3,114 +3,821 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NNAMDI ONU | Data Analyst & BI Specialist</title>
+
+    <title>Nnamdi Onu | Business Analyst | Data Analyst | Business Intelligence</title>
+
+    <meta name="description"
+          content="Portfolio of Nnamdi Onu, a Business Analytics professional specializing in business analysis, data analytics, Power BI, SQL, Python, Excel, and business intelligence.">
+
     <style>
         :root {
             --primary: #0d6efd;
-            --dark: #212529;
-            --gray-bg: #f8f9fa;
-            --border: #dee2e6;
+            --primary-dark: #0a58ca;
+            --dark: #172033;
+            --text: #475569;
+            --light-text: #64748b;
+            --background: #ffffff;
+            --light-background: #f8fafc;
+            --border: #e2e8f0;
+            --card-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
         }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--dark); max-width: 950px; margin: 0 auto; padding: 30px 20px; background-color: var(--gray-bg); }
-        header { border-bottom: 2px solid var(--border); padding-bottom: 25px; margin-bottom: 35px; }
-        h1 { margin: 0 0 5px 0; color: var(--primary); font-size: 2.2rem; }
-        .subtitle { font-size: 1.25rem; font-weight: 600; color: #495057; margin-bottom: 12px; }
-        .bio { font-size: 1rem; color: #6c757d; max-width: 800px; margin-bottom: 15px; }
-        .contact-links a { color: var(--primary); font-weight: 600; text-decoration: none; margin-right: 15px; }
-        .contact-links a:hover { text-decoration: underline; }
-        
-        .section-title { font-size: 1.5rem; border-left: 4px solid var(--primary); padding-left: 10px; margin-bottom: 25px; color: var(--dark); }
-        
-        .project-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 28px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.03); }
-        .project-title { margin: 0 0 10px 0; font-size: 1.35rem; color: #111; }
-        
-        .tag-container { margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 8px; }
-        .tag { background: #e9ecef; color: #333; padding: 4px 10px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; }
-        .tag-pbi { background: #fff3cd; color: #856404; }
-        .tag-sql { background: #cce5ff; color: #004085; }
-        .tag-python { background: #d4edda; color: #155724; }
-        
-        /* Stats summary grid for Power BI project */
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 20px 0; }
-        .stat-box { background: #f1f3f5; padding: 12px; border-radius: 6px; text-align: center; border: 1px solid #e9ecef; }
-        .stat-box .number { font-size: 1.2rem; font-weight: 700; color: var(--primary); display: block; }
-        .stat-box .label { font-size: 0.78rem; color: #6c757d; text-transform: uppercase; font-weight: 600; }
 
-        ul { padding-left: 20px; margin-bottom: 20px; }
-        li { margin-bottom: 6px; }
-        
-        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
-        .btn { display: inline-flex; align-items: center; padding: 9px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
-        .btn-primary { background-color: var(--primary); color: white; }
-        .btn-primary:hover { background-color: #0b5ed7; }
-        .btn-dark { background-color: #24292f; color: white; }
-        .btn-dark:hover { background-color: #000; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--background);
+        }
+
+        a {
+            color: var(--primary);
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 15px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 750;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* GENERAL */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 75px 0;
+        }
+
+        .section-light {
+            background: var(--light-background);
+        }
+
+        .section-label {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin-bottom: 36px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            padding: 90px 0;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-label {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            line-height: 1.05;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-size: clamp(1.15rem, 3vw, 1.5rem);
+            font-weight: 650;
+            color: var(--text);
+            margin-bottom: 22px;
+        }
+
+        .hero-description {
+            max-width: 780px;
+            font-size: 1.08rem;
+            color: var(--light-text);
+            margin-bottom: 30px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 18px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 650;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border);
+            color: var(--dark);
+            background: white;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 55px;
+            align-items: start;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+        }
+
+        .quick-info {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            background: white;
+        }
+
+        .quick-info h3 {
+            color: var(--dark);
+            margin-bottom: 18px;
+        }
+
+        .quick-info p {
+            margin-bottom: 12px;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            background: white;
+        }
+
+        .skill-card h3 {
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            font-size: 0.95rem;
+        }
+
+        /* PROJECTS */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .project-card {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: white;
+            padding: 28px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-number {
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 750;
+            margin-bottom: 10px;
+        }
+
+        .project-card h3 {
+            color: var(--dark);
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            margin-bottom: 18px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: #eef5ff;
+            color: #1859a9;
+            font-size: 0.8rem;
+            font-weight: 650;
+        }
+
+        .project-link {
+            margin-top: auto;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .coming-soon {
+            color: var(--light-text);
+            font-weight: 650;
+            margin-top: auto;
+        }
+
+        /* EXPERIENCE */
+
+        .timeline-item {
+            border-left: 3px solid var(--primary);
+            padding-left: 22px;
+            margin-bottom: 32px;
+        }
+
+        .timeline-item h3 {
+            color: var(--dark);
+            margin-bottom: 3px;
+        }
+
+        .timeline-meta {
+            font-weight: 650;
+            color: var(--light-text);
+            margin-bottom: 10px;
+        }
+
+        /* EDUCATION */
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .education-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            background: white;
+        }
+
+        .education-card h3 {
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            max-width: 650px;
+            margin: 0 auto 26px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 28px 20px;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 75px 0;
+            }
+
+            .about-grid,
+            .projects-grid,
+            .skills-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+
     </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Nnamdi Onu</h1>
-        <div class="subtitle">Data Analyst & Business Intelligence Specialist</div>
-        <p class="bio">
-            Transforming raw, complex data into actionable business strategy. Experienced across the full data lifecycle—from SQL querying and Python data wrangling to robust data modeling and executive dashboard delivery.
-        </p>
-        <div class="contact-links">
-            <a href="https://github.com/nnamdionu" target="_blank">GitHub Profile</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="mailto:your-email@example.com">Email Contact</a>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">Nnamdi Onu</a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <header class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+
+                <div class="hero-label">Hello, I'm</div>
+
+                <h1>Nnamdi Onu</h1>
+
+                <div class="hero-title">
+                    Business Analyst | Data Analyst | Business Intelligence
+                </div>
+
+                <p class="hero-description">
+                    Business Analytics professional with a background in statistics,
+                    economics, planning, and data analysis. Skilled in Power BI, SQL,
+                    Python, and Excel, with a focus on transforming business problems
+                    and complex data into actionable insights, effective visualizations,
+                    and informed business decisions.
+                </p>
+
+                <div class="button-group">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+
+                    <a href="https://www.linkedin.com/in/nnamdi-onu-828a5b90/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn-secondary">
+                       LinkedIn
+                    </a>
+
+                    <a href="https://github.com/nnamdionu"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn btn-secondary">
+                       GitHub
+                    </a>
+
+                    <a href="mailto:onu.nnamdi@gmail.com"
+                       class="btn btn-secondary">
+                       Email Me
+                    </a>
+                </div>
+
+            </div>
         </div>
     </header>
 
-    <main>
-        <h2 class="section-title">Featured Projects</h2>
 
-        <!-- PROJECT 1: MAVEN MARKET POWER BI -->
-        <div class="project-card">
-            <h3 class="project-title">Maven Market — Global Enterprise BI & Executive Dashboard</h3>
-            <div class="tag-container">
-                <span class="tag tag-pbi">Power BI</span>
-                <span class="tag">Power Query (ETL)</span>
-                <span class="tag">DAX Measures</span>
-                <span class="tag">Star Schema Modeling</span>
-                <span class="tag">Interactive UX</span>
-            </div>
-            
-            <p>An end-to-end business intelligence solution built for a global supermarket chain tracking multi-region sales operations, store profitability, product category demand, and return metrics.</p>
+    <!-- ABOUT -->
+    <section id="about" class="section-light">
+        <div class="container">
 
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <span class="number">$1.75M+</span>
-                    <span class="label">Total Revenue Analyzed</span>
-                </div>
-                <div class="stat-box">
-                    <span class="number">24+ Stores</span>
-                    <span class="label">Multi-Region Tracking</span>
-                </div>
-                <div class="stat-box">
-                    <span class="number">Star Schema</span>
-                    <span class="label">Optimized Model</span>
-                </div>
-                <div class="stat-box">
-                    <span class="number">Dynamic DAX</span>
-                    <span class="label">Time Intelligence</span>
-                </div>
-            </div>
+            <div class="section-label">About Me</div>
+            <h2 class="section-title">Turning data into business insight</h2>
 
-            <ul>
-                <li><strong>ETL & Data Transformation:</strong> Imported and cleaned multi-table transactional datasets using Power Query, replacing missing values, standardizing data types, and establishing custom conditional columns.</li>
-                <li><strong>Data Modeling:</strong> Built a fully normalized Star Schema with 1-to-many relationships connecting key fact tables (<code>Transactions_Data</code>, <code>Returns_Data</code>) to lookup dimension tables (<code>Customers</code>, <code>Products</code>, <code>Stores</code>, <code>Regions</code>, <code>Calendar</code>).</li>
-                <li><strong>DAX Analytics:</strong> Authored custom time-intelligence DAX measures including <code>Total Revenue</code>, <code>Total Profit</code>, <code>YTD Revenue</code>, <code>6-Month Rolling Profit</code>, and <code>Return Rate %</code>.</li>
-                <li><strong>User Experience Design:</strong> Designed interactive executive dashboard layouts featuring dynamic matrix drill-downs, dynamic tooltips, and custom navigation bookmarks for seamless user experience.</li>
-            </ul>
+            <div class="about-grid">
 
-            <div class="btn-group">
-                <a href="https://github.com/nnamdionu/maven-market-powerbi" target="_blank" class="btn btn-dark">📂 Source Code & Data Model</a>
-                <a href="https://mavenshowcase.com/project/57867" target="_blank" class="btn btn-primary">📊 Interactive Live Dashboard</a>
+                <div class="about-text">
+                    <p>
+                        I am a Business Analytics professional with an academic
+                        foundation in statistics and economics and professional
+                        experience in planning, budgeting, reporting, and operations.
+                    </p>
+
+                    <p>
+                        My analytical work combines business understanding with
+                        data tools such as Power BI, SQL, Python, Excel, and Tableau.
+                        I am particularly interested in using data to identify trends,
+                        evaluate performance, communicate insights, and support
+                        evidence-based business decisions.
+                    </p>
+
+                    <p>
+                        This portfolio showcases projects in business intelligence,
+                        data analytics, predictive analytics, and business analysis.
+                    </p>
+                </div>
+
+                <div class="quick-info">
+                    <h3>Core Focus</h3>
+
+                    <p><strong>Business Analysis</strong><br>
+                    Requirements, process analysis, stakeholder needs, and business improvement.</p>
+
+                    <p><strong>Data Analytics</strong><br>
+                    Data preparation, analysis, statistical methods, and insight generation.</p>
+
+                    <p><strong>Business Intelligence</strong><br>
+                    Data modelling, KPI development, dashboards, and performance reporting.</p>
+                </div>
+
             </div>
         </div>
+    </section>
 
-    </main>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="container">
+
+            <div class="section-label">Capabilities</div>
+            <h2 class="section-title">Skills & Tools</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>Business Intelligence</h3>
+                    <p>
+                        Power BI, DAX, Power Query, data modelling,
+                        KPI development, dashboard design, and Tableau.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Data Analytics</h3>
+                    <p>
+                        SQL, Python, Pandas, exploratory data analysis,
+                        statistical analysis, data cleaning, and Excel.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Business Analysis</h3>
+                    <p>
+                        Business requirements, process analysis,
+                        stakeholder analysis, gap analysis, user stories,
+                        and business recommendations.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-light">
+        <div class="container">
+
+            <div class="section-label">Portfolio</div>
+            <h2 class="section-title">Featured Projects</h2>
+
+            <p class="section-intro">
+                Selected projects demonstrating business intelligence,
+                data analytics, predictive modelling, and business analysis.
+            </p>
+
+            <div class="projects-grid">
+
+                <!-- PROJECT 1 -->
+                <article class="project-card">
+
+                    <div class="project-number">PROJECT 01</div>
+
+                    <h3>Maven Market Sales & Performance Analysis</h3>
+
+                    <p>
+                        Power BI business intelligence project focused on
+                        analyzing sales and operational performance through
+                        data modelling, DAX measures, interactive reporting,
+                        and KPI visualization.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Power Query</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">Data Modelling</span>
+                    </div>
+
+                    <a href="maven-market.html" class="project-link">
+                        View Case Study →
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+                <article class="project-card">
+
+                    <div class="project-number">PROJECT 02</div>
+
+                    <h3>Adventure Works Business Intelligence Analysis</h3>
+
+                    <p>
+                        Power BI project examining business performance
+                        through interactive dashboards, data modelling,
+                        analytical measures, and business-focused reporting.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">Power Query</span>
+                        <span class="tag">Business Intelligence</span>
+                    </div>
+
+                    <div class="coming-soon">
+                        Case study being prepared
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 3 -->
+                <article class="project-card">
+
+                    <div class="project-number">PROJECT 03</div>
+
+                    <h3>Auto Insurance Customer Churn Prediction</h3>
+
+                    <p>
+                        Predictive analytics project exploring customer churn
+                        and retention using exploratory data analysis,
+                        statistical modelling, and machine learning.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">Predictive Analytics</span>
+                    </div>
+
+                    <div class="coming-soon">
+                        Case study being prepared
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 4 -->
+                <article class="project-card">
+
+                    <div class="project-number">PROJECT 04</div>
+
+                    <h3>Business Analysis & Process Improvement</h3>
+
+                    <p>
+                        A forthcoming end-to-end business analysis case study
+                        using public data to examine a real business problem,
+                        document requirements, analyze processes, define KPIs,
+                        and recommend measurable improvements.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Business Analysis</span>
+                        <span class="tag">Process Mapping</span>
+                        <span class="tag">Requirements</span>
+                        <span class="tag">Data Analysis</span>
+                    </div>
+
+                    <div class="coming-soon">
+                        In development
+                    </div>
+
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <div class="container">
+
+            <div class="section-label">Background</div>
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="timeline-item">
+                <h3>Behaviour Support Worker</h3>
+                <div class="timeline-meta">
+                    Sunbeam Community & Developmental Services | 2024 – Present
+                </div>
+
+                <p>
+                    Work within a multidisciplinary service environment requiring
+                    accurate documentation, structured reporting, communication,
+                    adherence to established processes, and collaboration with
+                    internal stakeholders.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Senior Planning Officer – Budgeting & Data Analysis</h3>
+                <div class="timeline-meta">
+                    National Space Research and Development Agency (NASRDA) | 2016 – 2024
+                </div>
+
+                <p>
+                    Supported organizational planning, budgeting, data analysis,
+                    reporting, and performance monitoring, translating financial
+                    and operational information into reports used to support
+                    management decision-making.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education" class="section-light">
+        <div class="container">
+
+            <div class="section-label">Education</div>
+            <h2 class="section-title">Academic Background</h2>
+
+            <div class="education-grid">
+
+                <div class="education-card">
+                    <h3>Business Analytics</h3>
+                    <p>
+                        Ontario College Graduate Certificate<br>
+                        <strong>Seneca Polytechnic</strong><br>
+                        2026
+                    </p>
+                    <p>
+                        GPA: 4.0<br>
+                        With High Honours<br>
+                        President's Honour List
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <h3>Economics</h3>
+                    <p>
+                        Bachelor of Science<br>
+                        <strong>National Open University of Nigeria</strong><br>
+                        2023
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <h3>Statistics / Economics</h3>
+                    <p>
+                        Bachelor of Science<br>
+                        <strong>University of Nigeria, Nsukka</strong><br>
+                        2015
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container contact">
+
+            <div class="section-label">Contact</div>
+            <h2 class="section-title">Let's Connect</h2>
+
+            <p>
+                Interested in discussing opportunities in business analysis,
+                data analytics, or business intelligence? Feel free to connect
+                with me through LinkedIn or email.
+            </p>
+
+            <div class="button-group" style="justify-content:center;">
+
+                <a href="mailto:onu.nnamdi@gmail.com"
+                   class="btn btn-primary">
+                   Email Me
+                </a>
+
+                <a href="https://www.linkedin.com/in/nnamdi-onu-828a5b90/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-secondary">
+                   LinkedIn
+                </a>
+
+                <a href="https://github.com/nnamdionu"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-secondary">
+                   GitHub
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Nnamdi Onu · Business Analytics Portfolio
+    </footer>
 
 </body>
 </html>
