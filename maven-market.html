@@ -19,13 +19,9 @@
             --background: #ffffff;
             --light-background: #f8fafc;
             --border: #e2e8f0;
-            --success-bg: #ecfdf5;
-            --success-border: #a7f3d0;
+            --success-bg: #f0fdf4;
+            --success-border: #bbf7d0;
             --success-text: #166534;
-            --warning-bg: #fff7ed;
-            --warning-border: #fed7aa;
-            --warning-text: #9a3412;
-            --shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
         }
 
         * {
@@ -39,246 +35,240 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
+            font-family: Arial, Helvetica, sans-serif;
             color: var(--text);
             background: var(--background);
-        }
-
-        a {
-            color: var(--primary);
-        }
-
-        a:focus-visible {
-            outline: 3px solid rgba(13, 110, 253, 0.3);
-            outline-offset: 4px;
-            border-radius: 4px;
-        }
-
-        nav {
-            background: #ffffff;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 15px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .logo {
-            font-size: 1.2rem;
-            font-weight: 750;
-            color: var(--dark);
-            text-decoration: none;
-        }
-
-        .back-link {
-            text-decoration: none;
-            font-weight: 650;
-            white-space: nowrap;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
+            line-height: 1.7;
         }
 
         .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 24px;
-        }
-
-        section {
-            padding: 62px 0;
-        }
-
-        .section-light {
-            background: var(--light-background);
-        }
-
-        .case-hero {
-            padding: 68px 0 58px;
-        }
-
-        .eyebrow {
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: 750;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        h1 {
-            color: var(--dark);
-            font-size: clamp(2.4rem, 5vw, 3.65rem);
-            line-height: 1.1;
-            margin-bottom: 18px;
-            max-width: 900px;
-        }
-
-        .hero-description {
-            max-width: 850px;
-            font-size: 1.08rem;
-            color: var(--light-text);
-            margin-bottom: 25px;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tag {
-            background: #eef5ff;
-            color: #1859a9;
-            padding: 6px 11px;
-            border-radius: 20px;
-            font-size: 0.82rem;
-            font-weight: 650;
-        }
-
-        .section-label {
-            color: var(--primary);
-            font-size: 0.82rem;
-            font-weight: 750;
-            text-transform: uppercase;
-            letter-spacing: 1.3px;
-            margin-bottom: 7px;
-        }
-
-        .section-title {
-            color: var(--dark);
-            font-size: clamp(1.7rem, 3vw, 2rem);
-            line-height: 1.25;
-            margin-bottom: 20px;
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
         }
 
         .content-width {
             max-width: 850px;
         }
 
-        .content-width p {
-            margin-bottom: 16px;
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid var(--border);
         }
 
-        .project-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            margin-top: 30px;
+        .nav-container {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
         }
 
-        .image-caption {
+        .logo {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 1.08rem;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 650;
+        }
+
+        .case-hero {
+            padding: 70px 0 55px;
+            background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eyebrow,
+        .section-label {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.78rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            max-width: 900px;
+            color: var(--dark);
+            font-size: clamp(2.6rem, 5.5vw, 4.7rem);
+            line-height: 1.05;
+            letter-spacing: -0.045em;
+            margin-bottom: 24px;
+        }
+
+        .hero-description {
             max-width: 850px;
-            margin: 10px auto 0;
+            font-size: 1.12rem;
             color: var(--light-text);
-            font-size: 0.88rem;
-            text-align: center;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+
+        .tag {
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+            border-radius: 999px;
+            padding: 7px 13px;
+            font-size: 0.86rem;
+            font-weight: 650;
+        }
+
+        section {
+            padding: 75px 0;
+            scroll-margin-top: 25px;
+        }
+
+        .section-light {
+            background: var(--light-background);
+        }
+
+        .section-title {
+            color: var(--dark);
+            font-size: clamp(1.9rem, 4vw, 2.7rem);
+            line-height: 1.15;
+            margin-bottom: 22px;
+            letter-spacing: -0.025em;
+        }
+
+        p + p {
+            margin-top: 16px;
         }
 
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 18px;
-            margin-top: 30px;
+            margin-top: 35px;
         }
 
         .stat-card {
             background: white;
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 22px;
+            padding: 24px;
         }
 
         .stat-value {
             color: var(--dark);
-            font-size: 1.6rem;
-            font-weight: 750;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 5px;
         }
 
         .stat-label {
             color: var(--light-text);
-            font-size: 0.9rem;
+            font-size: 0.92rem;
         }
 
         .two-column {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 22px;
-            margin-top: 25px;
+            margin-top: 28px;
         }
 
         .info-card {
             background: white;
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 25px;
+            padding: 26px;
         }
 
         .info-card h3 {
             color: var(--dark);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        .info-card ul {
+        ul {
             padding-left: 20px;
         }
 
-        .info-card li {
+        li + li {
+            margin-top: 7px;
+        }
+
+        .project-image {
+            width: 100%;
+            display: block;
+            margin-top: 32px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        }
+
+        .image-caption {
+            color: var(--light-text);
+            font-size: 0.88rem;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .analysis-block + .analysis-block {
+            margin-top: 60px;
+        }
+
+        .analysis-block h3 {
+            color: var(--dark);
+            font-size: 1.5rem;
             margin-bottom: 8px;
+        }
+
+        .analysis-description {
+            max-width: 850px;
+            color: var(--light-text);
         }
 
         .insights-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin-top: 30px;
         }
 
         .insight-card {
+            background: white;
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 25px;
-            background: white;
         }
 
         .insight-number {
             color: var(--primary);
-            font-size: 0.8rem;
-            font-weight: 750;
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
             margin-bottom: 8px;
-            letter-spacing: 0.4px;
         }
 
         .insight-card h3 {
             color: var(--dark);
-            margin-bottom: 10px;
-            line-height: 1.4;
+            margin-bottom: 9px;
         }
 
         .callout {
-            margin-top: 28px;
-            padding: 22px;
-            border-radius: 10px;
-            border: 1px solid var(--warning-border);
-            background: var(--warning-bg);
-            color: var(--warning-text);
+            margin-top: 30px;
+            background: #eff6ff;
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            padding: 20px 22px;
         }
 
         .recommendations {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-top: 28px;
         }
@@ -293,7 +283,6 @@
         .recommendation-card h3 {
             color: var(--dark);
             margin-bottom: 10px;
-            line-height: 1.4;
         }
 
         .skills-box {
@@ -330,7 +319,7 @@
             justify-content: space-between;
             gap: 15px;
             align-items: center;
-            padding-top: 20px;
+            padding-top: 30px;
         }
 
         .btn {
@@ -339,13 +328,6 @@
             padding: 11px 18px;
             border-radius: 7px;
             font-weight: 650;
-            transition: background 0.2s ease,
-                        border-color 0.2s ease,
-                        transform 0.2s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-1px);
         }
 
         .btn-primary {
@@ -363,11 +345,6 @@
             background: white;
         }
 
-        .btn-secondary:hover {
-            border-color: #cbd5e1;
-            background: var(--light-background);
-        }
-
         footer {
             border-top: 1px solid var(--border);
             padding: 28px 20px;
@@ -377,10 +354,7 @@
         }
 
         @media (max-width: 800px) {
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
+            .stats-grid,
             .two-column,
             .insights-grid,
             .recommendations {
@@ -388,63 +362,35 @@
             }
 
             section {
-                padding: 52px 0;
+                padding: 55px 0;
             }
 
             .case-hero {
                 padding: 55px 0 45px;
             }
 
-            .project-image {
-                margin-top: 24px;
-            }
-        }
-
-        @media (max-width: 520px) {
             .nav-container {
-                padding: 13px 18px;
-            }
-
-            .container {
-                padding: 0 18px;
-            }
-
-            .logo {
-                font-size: 1.05rem;
-            }
-
-            .back-link {
-                font-size: 0.88rem;
-            }
-
-            h1 {
-                font-size: 2.25rem;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stat-card,
-            .info-card,
-            .insight-card,
-            .recommendation-card,
-            .skills-box {
-                padding: 20px;
+                min-height: 64px;
             }
 
             .bottom-nav {
                 flex-direction: column;
-                align-items: stretch;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .container,
+            .nav-container {
+                width: min(100% - 28px, 1120px);
             }
 
-            .bottom-nav .btn {
-                width: 100%;
-                text-align: center;
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            h1 {
+                font-size: 2.45rem;
             }
         }
     </style>
@@ -465,12 +411,12 @@
 
         <div class="eyebrow">Power BI Case Study</div>
 
-        <h1>Maven Market Sales &amp; Performance Analysis</h1>
+        <h1>Maven Market Sales & Performance Analysis</h1>
 
         <p class="hero-description">
             A business intelligence case study using the Maven Market retail
-            dataset to analyze transactions, revenue, profitability, returns,
-            product performance, store performance, and geographic trends.
+            dataset to analyze sales, profitability, returns, product performance,
+            store performance, and geographic trends.
         </p>
 
         <div class="tags">
@@ -493,7 +439,6 @@
         <h2 class="section-title">Business Objective</h2>
 
         <div class="content-width">
-
             <p>
                 The objective of this project was to develop an interactive
                 business intelligence solution that provides management with a
@@ -507,11 +452,9 @@
                 and profitability trends, and examining product returns alongside
                 overall commercial performance.
             </p>
-
         </div>
 
         <div class="stats-grid">
-
             <div class="stat-card">
                 <div class="stat-value">269K+</div>
                 <div class="stat-label">Transaction records analyzed</div>
@@ -531,7 +474,6 @@
                 <div class="stat-value">24</div>
                 <div class="stat-label">Stores</div>
             </div>
-
         </div>
 
     </div>
@@ -542,7 +484,7 @@
     <div class="container">
 
         <div class="section-label">Data</div>
-        <h2 class="section-title">Dataset &amp; Preparation</h2>
+        <h2 class="section-title">Dataset & Preparation</h2>
 
         <div class="two-column">
 
@@ -559,7 +501,7 @@
             </div>
 
             <div class="info-card">
-                <h3>Preparation &amp; Transformation</h3>
+                <h3>Preparation & Transformation</h3>
                 <ul>
                     <li>Imported and transformed source data using Power Query</li>
                     <li>Validated field types and analytical dimensions</li>
@@ -597,9 +539,8 @@
         </div>
 
         <img src="maven-market-data-model.png"
-             alt="Maven Market Power BI data model showing fact tables, dimension tables, relationships, and a dedicated measures table"
-             class="project-image"
-             loading="lazy">
+             alt="Maven Market Power BI data model"
+             class="project-image">
 
         <p class="image-caption">
             Power BI model showing transaction and returns fact tables,
@@ -614,13 +555,13 @@
     <div class="container">
 
         <div class="section-label">Analysis</div>
-        <h2 class="section-title">Measures &amp; KPI Development</h2>
+        <h2 class="section-title">Measures & KPI Development</h2>
 
         <div class="content-width">
             <p>
                 DAX measures were used to create a reusable analytical layer for
-                evaluating transactions, revenue, profit, returns, margins, targets,
-                and time-based performance.
+                evaluating transactions, revenue, profit, returns, margins,
+                targets, and time-based performance.
             </p>
         </div>
 
@@ -639,7 +580,7 @@
             </div>
 
             <div class="info-card">
-                <h3>Time &amp; Target Analysis</h3>
+                <h3>Time & Target Analysis</h3>
                 <ul>
                     <li>Current-month performance</li>
                     <li>Previous-month comparisons</li>
@@ -664,7 +605,7 @@
 
         <div class="content-width">
             <p>
-                The dashboard consolidates key business indicators into a single
+                The dashboard brings the main business indicators into a single
                 management view. Users can evaluate current-month transactions,
                 profit, and returns against targets while exploring product,
                 geographic, and revenue performance.
@@ -672,13 +613,13 @@
         </div>
 
         <img src="maven-market-dashboard.png"
-             alt="Maven Market Power BI Topline Performance dashboard showing transactions, profit, returns, product performance, geographic performance, and revenue trends"
-             class="project-image"
-             loading="lazy">
+             alt="Maven Market Power BI Topline Performance dashboard"
+             class="project-image">
 
         <p class="image-caption">
-            Power BI dashboard displaying KPI performance, product metrics,
-            geographic distribution, revenue trends, and performance against target.
+            Topline Power BI dashboard displaying KPI performance, product
+            metrics, geographic distribution, revenue trends, and performance
+            against target.
         </p>
 
     </div>
@@ -686,6 +627,81 @@
 
 
 <section>
+    <div class="container">
+
+        <div class="section-label">Business Analysis</div>
+        <h2 class="section-title">Supporting Analysis</h2>
+
+        <div class="content-width">
+            <p>
+                Additional report pages were developed to move beyond topline
+                KPIs and investigate store performance, return behaviour, and the
+                business findings emerging from the analysis.
+            </p>
+        </div>
+
+
+        <div class="analysis-block">
+            <h3>Key Business Insights</h3>
+            <p class="analysis-description">
+                A dedicated insights page summarizes the most decision-relevant
+                findings from the report and provides navigation to the supporting
+                analysis.
+            </p>
+
+            <img src="maven-market-insights.png"
+                 alt="Maven Market Power BI Key Business Insights page"
+                 class="project-image">
+
+            <p class="image-caption">
+                Key Business Insights page summarizing year-end performance,
+                geographic revenue contribution, store performance, and returns.
+            </p>
+        </div>
+
+
+        <div class="analysis-block">
+            <h3>Store Performance Analysis</h3>
+            <p class="analysis-description">
+                Store-level analysis compares total revenue with revenue per
+                square foot, helping distinguish overall sales performance from
+                performance relative to store size.
+            </p>
+
+            <img src="maven-market-store-analysis.png"
+                 alt="Maven Market Power BI Store Performance Analysis page"
+                 class="project-image">
+
+            <p class="image-caption">
+                Store performance analysis comparing revenue by store with
+                revenue per square foot.
+            </p>
+        </div>
+
+
+        <div class="analysis-block">
+            <h3>Return Performance Analysis</h3>
+            <p class="analysis-description">
+                Return analysis compares product brands using both return rate
+                and total returns, providing complementary views of return
+                frequency and return volume.
+            </p>
+
+            <img src="maven-market-returns-analysis.png"
+                 alt="Maven Market Power BI Return Performance Analysis page"
+                 class="project-image">
+
+            <p class="image-caption">
+                Return performance analysis comparing return rate and total
+                returns across product brands.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section-light">
     <div class="container">
 
         <div class="section-label">Results</div>
@@ -698,9 +714,8 @@
                 <h3>Strong year-end performance</h3>
                 <p>
                     December 1998 generated approximately $120.2K in revenue,
-                    $71.7K in profit, and 18,325 transactions. It was the
-                    highest-revenue month of 1998, indicating strong year-end
-                    commercial performance.
+                    $71.7K in profit, and 18,325 transactions, making it the
+                    highest-revenue month of 1998.
                 </p>
             </div>
 
@@ -709,8 +724,8 @@
                 <h3>USA generated the largest revenue share</h3>
                 <p>
                     The USA accounted for approximately 51% of 1998 revenue,
-                    followed by Mexico at about 40% and Canada at approximately 9%.
-                    This made the USA the largest overall market by revenue.
+                    followed by Mexico at about 40% and Canada at approximately
+                    9%.
                 </p>
             </div>
 
@@ -718,10 +733,9 @@
                 <div class="insight-number">INSIGHT 03</div>
                 <h3>High-performing stores existed across markets</h3>
                 <p>
-                    Although the USA led overall revenue, the highest-revenue
-                    individual store in 1998 was Store 12 in Mexico at approximately
-                    $87.6K. This indicates that strong store-level performance was
-                    not limited to the largest national market.
+                    Although the USA led overall revenue, Store 12 in Mexico was
+                    the highest-revenue individual store in 1998 at approximately
+                    $87.6K.
                 </p>
             </div>
 
@@ -730,9 +744,9 @@
                 <h3>Returns require attention alongside growth</h3>
                 <p>
                     December transactions and profit exceeded their monthly goals,
-                    while 496 return records were recorded against a goal of 482.
-                    The result shows the importance of monitoring return performance
-                    alongside sales and profitability growth.
+                    while 496 returns were recorded against a goal of 482,
+                    highlighting the importance of monitoring returns alongside
+                    growth.
                 </p>
             </div>
 
@@ -750,7 +764,7 @@
 </section>
 
 
-<section class="section-light">
+<section>
     <div class="container">
 
         <div class="section-label">Business Application</div>
@@ -761,9 +775,10 @@
             <div class="recommendation-card">
                 <h3>Investigate return drivers</h3>
                 <p>
-                    Review brands, products, and stores contributing disproportionately
-                    to returns to identify whether product quality, fulfilment,
-                    or other operational factors require attention.
+                    Review brands, products, and stores contributing
+                    disproportionately to returns to determine whether product
+                    quality, fulfilment, or other operational factors require
+                    attention.
                 </p>
             </div>
 
@@ -791,29 +806,27 @@
 </section>
 
 
-<section>
+<section class="section-light">
     <div class="container">
 
         <div class="section-label">Skills Demonstrated</div>
         <h2 class="section-title">What This Project Shows</h2>
 
         <div class="skills-box">
-
-            <h3>Technical &amp; Analytical Skills</h3>
+            <h3>Technical & Analytical Skills</h3>
 
             <div class="skills-list">
                 <span class="skill">Power BI</span>
                 <span class="skill">Power Query</span>
                 <span class="skill">DAX</span>
                 <span class="skill">Data Modelling</span>
-                <span class="skill">Fact &amp; Dimension Tables</span>
+                <span class="skill">Fact & Dimension Tables</span>
                 <span class="skill">KPI Development</span>
                 <span class="skill">Time Intelligence</span>
                 <span class="skill">Data Visualization</span>
                 <span class="skill">Business Analysis</span>
                 <span class="skill">Insight Communication</span>
             </div>
-
         </div>
 
         <div class="bottom-nav">
